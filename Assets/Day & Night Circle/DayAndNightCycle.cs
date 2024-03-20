@@ -32,10 +32,17 @@ public class DayAndNightCykle : MonoBehaviour
     public float moonIntensity = 1f;
     public AnimationCurve moonIntensityMultiplier;
     public AnimationCurve moonTemperatureCurve;
+
+    [Header("Stars")]
+    public VolumeProfile volumeProfile;
+    private PhysicallyBasedSky skySettings;
+    public float starsIntensity = 1f;
+    public AnimationCurve starsCurve;
     void Start()
     {
         UpdateTimeText();
         CheckShadowStatus();
+        SkyStar();
     }
 
     // Update is called once per frame
@@ -51,11 +58,14 @@ public class DayAndNightCykle : MonoBehaviour
         UpdateTimeText();
         UpdateLight();
         CheckShadowStatus();
+        SkyStar();
     }
 
     private void OnValidate()
     { 
         UpdateLight();
+        CheckShadowStatus();
+        SkyStar();
     }
     void UpdateTimeText()
     {
@@ -144,5 +154,11 @@ public class DayAndNightCykle : MonoBehaviour
             moonLight.gameObject.SetActive(true);
             moonActive = true;
         }
+    }
+
+    void SkyStar() 
+    {
+        volumeProfile.TryGet<PhysicallyBasedSky>(out skySettings);
+        skySettings.spaceEmissionMultiplier.value = starsCurve.Evaluate(currentTime / 24.0f) * starsIntensity;
     }
 }
