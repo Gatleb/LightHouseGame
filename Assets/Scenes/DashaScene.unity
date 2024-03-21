@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1214.0846, g: 1083.5587, b: 1117.0978, a: 1}
+  m_IndirectSpecularColor: {r: 155.48476, g: 147.56252, b: 170.5204, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -914,7 +914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 128.98259
+  m_Intensity: 35.77487
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1036,7 +1036,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 128.98259
+  m_Intensity: 35.77487
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1079,7 +1079,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 12406.283
+  m_ColorTemperature: 12361.559
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1093,7 +1093,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845279096}
-  m_LocalRotation: {x: 0.6480427, y: -0.04999779, z: -0.042702146, w: -0.7587605}
+  m_LocalRotation: {x: 0.09127826, y: 0.8835552, z: 0.32364824, w: -0.32596067}
   m_LocalPosition: {x: 49.3098, y: 6.983319, z: 55.85354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 17895.312
+  m_Intensity: 5990.097
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1345,7 +1345,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 17895.312
+  m_Intensity: 5990.097
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1388,7 +1388,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6217.665
+  m_ColorTemperature: 6602.727
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -1402,7 +1402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929301704}
-  m_LocalRotation: {x: 0.75876045, y: 0.042702146, z: -0.049997788, w: 0.6480427}
+  m_LocalRotation: {x: 0.17329292, y: 0.71358186, z: -0.16019034, w: 0.65962833}
   m_LocalPosition: {x: -7104, y: 149.15588, z: 10529}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1822,12 +1822,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074fa0c31f22c704b92e32d69eff98ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: 12.6
-  timeSpeed: 1
+  currentTime: 12.3
+  timeSpeed: 2.77
   currentTimeString: 
   sunLight: {fileID: 929301706}
-  sunPosition: 7.54
-  sunIntensity: 9000
+  sunLatitude: 62.7
+  sunLongitude: -90
+  sunIntensity: 3000
   sunIntensityMultiplier:
     serializedVersion: 2
     m_Curve:
@@ -1988,6 +1989,8 @@ MonoBehaviour:
   sunActive: 1
   moonActive: 0
   moonLight: {fileID: 845279098}
+  moonLatitude: 50.7
+  moonLongitude: 36
   moonIntensity: 2000
   moonIntensityMultiplier:
     serializedVersion: 2
@@ -2126,6 +2129,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  polarStarLatitude: 50.7
+  polarStarLongitude: 90
 --- !u!4 &1080024492
 Transform:
   m_ObjectHideFlags: 0
@@ -2479,14 +2484,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.0022842123, y: -0.09039547, z: -0.01893201, w: 0.99572337}
   m_LocalPosition: {x: 490.7, y: 104.1, z: 580.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.065, y: -10.376, z: -2.184}
 --- !u!114 &1823688468
 MonoBehaviour:
   m_ObjectHideFlags: 0

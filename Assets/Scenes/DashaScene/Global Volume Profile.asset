@@ -849,10 +849,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0
   type:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   sphericalMode:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   seaLevel:
     m_OverrideState: 1
@@ -861,7 +861,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 6378100
   planetCenterPosition:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 0, y: -6378100, z: 0}
   airDensityR:
     m_OverrideState: 1
@@ -879,16 +879,16 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 55261.973
   aerosolDensity:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.276
   aerosolTint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   aerosolMaximumAltitude:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 8289.296
   aerosolAnisotropy:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   numberOfBounces:
     m_OverrideState: 1
@@ -897,43 +897,43 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   groundColorTexture:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {fileID: 0}
   groundEmissionTexture:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {fileID: 8900000, guid: 18ec2d52be8f4524a97c25a2ed27838e, type: 3}
   groundEmissionMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   planetRotation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 0, y: 0, z: 0}
   spaceEmissionTexture:
     m_OverrideState: 1
     m_Value: {fileID: 8900000, guid: 18ec2d52be8f4524a97c25a2ed27838e, type: 3}
   spaceEmissionMultiplier:
     m_OverrideState: 1
-    m_Value: 12565
+    m_Value: 0
   spaceRotation:
     m_OverrideState: 1
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 320.84442, y: 275.80716, z: 356.32562}
   colorSaturation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   alphaSaturation:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   alphaMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   horizonTint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   zenithTint:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   horizonZenithShift:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
   m_SkyVersion: 1
   m_ObsoleteEarthPreset:

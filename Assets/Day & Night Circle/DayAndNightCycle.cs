@@ -17,7 +17,10 @@ public class DayAndNightCykle : MonoBehaviour
 
     [Header("Sun Settings")]
     public Light sunLight;
-    public float sunPosition = 1f;
+    [Range(0f, 90f)]
+    public float sunLatitude = 24f;
+    [Range(-100f, 100f)]
+    public float sunLongitude = -90f;
     public float sunIntensity = 1f;
     public AnimationCurve sunIntensityMultiplier;
     public AnimationCurve sunTemperatureCurve;
@@ -29,6 +32,10 @@ public class DayAndNightCykle : MonoBehaviour
 
     [Header("Moon Settings")]
     public Light moonLight;
+    [Range(0f, 90f)]
+    public float moonLatitude = 40f;
+    [Range(-100f, 100f)]
+    public float moonLongitude = 90f;
     public float moonIntensity = 1f;
     public AnimationCurve moonIntensityMultiplier;
     public AnimationCurve moonTemperatureCurve;
@@ -38,6 +45,10 @@ public class DayAndNightCykle : MonoBehaviour
     private PhysicallyBasedSky skySettings;
     public float starsIntensity = 1f;
     public AnimationCurve starsCurve;
+    [Range(0f, 90f)]
+    public float polarStarLatitude = 40f;
+    [Range(-100f, 100f)]
+    public float polarStarLongitude = 90f;
     void Start()
     {
         UpdateTimeText();
@@ -75,9 +86,8 @@ public class DayAndNightCykle : MonoBehaviour
     void UpdateLight()
     {
         float sunRotation = currentTime / 24f * 360f;
-        sunLight.transform.rotation = Quaternion.Euler(sunRotation - 90f, sunPosition, 0f);
-        moonLight.transform.rotation = Quaternion.Euler(sunRotation + 90f, sunPosition, 0f);
-
+        sunLight.transform.localRotation = (Quaternion.Euler(sunLatitude - 90, sunLongitude, 0) * Quaternion.Euler(0, sunRotation, 0));
+        moonLight.transform.localRotation = (Quaternion.Euler(90 - moonLatitude, moonLongitude, 0) * Quaternion.Euler(0, sunRotation, 0));
 
         float normalizedTime = currentTime / 24f;
         float sunIntensityCurve = sunIntensityMultiplier.Evaluate(normalizedTime);
@@ -160,5 +170,7 @@ public class DayAndNightCykle : MonoBehaviour
     {
         volumeProfile.TryGet<PhysicallyBasedSky>(out skySettings);
         skySettings.spaceEmissionMultiplier.value = starsCurve.Evaluate(currentTime / 24.0f) * starsIntensity;
+
+        skySettings.spaceRotation.value = (Quaternion.Euler(90 - polarStarLatitude, polarStarLongitude, 0) * Quaternion.Euler(0, currentTime / 24.0f * 360.0f, 0)).eulerAngles;   
     }
 }
